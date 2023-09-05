@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { HiMenuAlt3, HiOutlineX } from "react-icons/hi";
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import logo from "../assets/logo.png";
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import useMediaQuery from "../hooks/useMediaQuery";
 
@@ -15,13 +13,9 @@ function Navbar({ isTopOfPage }) {
   return (
     <div className={` ${navbarBackground} z-40 w-full fixed top-0 md:py-3`}>
       <nav className="flex items-center justify-between mx-auto w-5/6">
-        {isAboveSmallScreens ? (
-          <div className="md:w-[200px]">
-            <img src={logo} alt="logo" />
-          </div>
-        ) : (
-          <h1 className="font-bold text-[20px]">CULTIFY</h1>
-        )}
+        <div className="md:text-[35px] font-bold">
+          <span className="text-green">Agri</span>Link
+        </div>
         {isAboveSmallScreens ? (
           <div className="flex justify-between gap-10 font-opensans text-sm font-semibold">
             <NavLink to="/">Home</NavLink>
@@ -29,7 +23,7 @@ function Navbar({ isTopOfPage }) {
             <AnchorLink href="#contactus">Contact Us</AnchorLink>
             <NavLink to="/signin">Sign In</NavLink>
             <NavLink
-              to='/dashboard'
+              to="/dashboard"
               style={{
                 color: "#fff",
                 padding: "13px 25px",
@@ -59,12 +53,15 @@ function Navbar({ isTopOfPage }) {
               style={{ fontSize: "18.06px" }}
               className="flex flex-col gap-10 ml-[33%] text-white scale-up-center"
             >
-              <NavLink to='/' >Home</NavLink>
+              <NavLink to="/">Home</NavLink>
               <AnchorLink href="#aboutus">About Us</AnchorLink>
               <AnchorLink href="#contactus">Contact Us</AnchorLink>
-              <NavLink to='/signin'>Sign In</NavLink>
+              <NavLink to="/signin">Sign In</NavLink>
               <div>
-                <NavLink to='/register' className="text-black md:px-[20px] md:py-[15px] px-[15px] py-[10px] rounded-[10px] bg-white">
+                <NavLink
+                  to="/dashboard"
+                  className="text-black md:px-[20px] md:py-[15px] px-[15px] py-[10px] rounded-[10px] bg-white"
+                >
                   Get Started
                 </NavLink>
               </div>
