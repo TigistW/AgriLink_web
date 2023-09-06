@@ -1,26 +1,24 @@
-import React from 'react';
+import React from "react";
 import { FaBars } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
-import Container from '../components/container';
-import boxImg from '../assets/boxImage.png';
-
-
+import Container from "../components/container";
+import boxImg from "../assets/boxImage.png";
 
 function Dashboard() {
-    const document = [
-      {
-        image: boxImg,
-        title: "THE YAM PROJECT",
-        price: "Price per unit: #5000",
-        duration: "Duration: 5 months",
-        roi: "ROI: 5%",
-        location: "Location: Abeokuta",
-        start: "Start date: 2nd Feb, 2005",
-        end: "End date: 2nd jun, 2003",
-        links: "View full details",
-      },
-    ];
+  const document = [
+    {
+      image: boxImg,
+      title: "THE YAM PROJECT",
+      price: "Price per unit: #5000",
+      duration: "Duration: 5 months",
+      roi: "ROI: 5%",
+      location: "Location: Abeokuta",
+      start: "Start date: 2nd Feb, 2005",
+      end: "End date: 2nd jun, 2003",
+      links: "View full details",
+    },
+  ];
   return (
     <div className="">
       <nav className="bg-white z-40">
@@ -114,4 +112,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard
+export default Dashboard;
